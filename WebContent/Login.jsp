@@ -1,4 +1,4 @@
-<%@page import="secure.cryptRsa"%>
+<%@page import="secure.cryptedRsa"%>
 <%@page import="java.io.IOException"%>
 <%@page import="java.security.InvalidKeyException"%>
 <%@page import="java.security.spec.RSAPublicKeySpec"%>
@@ -17,7 +17,7 @@
 </head>
 <body>
 <%
-new cryptRsa().encryptRsa(request, response, "Secured.jsp");
+	new cryptedRsa().encryptRsa(request, response, "Secured.jsp");
 %>
 </body>
 </html>

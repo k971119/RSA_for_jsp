@@ -1,4 +1,4 @@
-<%@page import="secure.cryptRsa"%>
+<%@page import="secure.cryptedRsa"%>
 <%@page import="java.security.PrivateKey"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -22,13 +22,13 @@ if(privateKey == null){
 	out.print("<script>alert('세션에서 보안키를 찾을 수 없습니다.');</script>");
 }
 try{
-	username = new cryptRsa().decryptRsa(privateKey, securedUsername);
-	password = new cryptRsa().decryptRsa(privateKey, securedPassword);
+	username = new cryptedRsa().decryptRsa(privateKey, securedUsername);
+	password = new cryptedRsa().decryptRsa(privateKey, securedPassword);
 }catch(Exception e){
 	e.printStackTrace();
 }
 %>
-<jsp:useBean id="decrypt" class="secure.cryptRsa"/>
+<jsp:useBean id="decrypt" class="secure.cryptedRsa"/>
 <h1>ID : <%=username %></h1>
 <h1>PW : <%=password %></h1>
 </body>
