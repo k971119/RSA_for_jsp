@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>ทฮฑืภฮ</title>
+<title>๋ก๊ทธ์ธ</title>
 </head>
 <body>
 		<script type="text/javascript" src="lib/js/rsa/jsbn.js"></script>
@@ -14,15 +14,15 @@
     </head>
     <body>
         <div>
-            <label for="username">ป็ฟ๋ภฺID : <input type="text" id="username" size="16"/></label>
-            <label for="password">บ๑นะน๘ศฃ : <input type="password" id="password" size="16" /></label>
+            <label for="username">์ฌ์ฉ์ID : <input type="text" id="username" size="16"/></label>
+            <label for="password">๋น๋ฐ€๋ฒํธ : <input type="password" id="password" size="16" /></label>
             <input type="hidden" id="rsaPublicKeyModulus" value="<%=request.getAttribute("publicKeyModulus")%>" />
             <input type="hidden" id="rsaPublicKeyExponent" value="<%=request.getAttribute("publicKeyExponent")%>" />
         </div>
         <form id="securedLoginForm" name="securedLoginForm" onsubmit="validateEncryptedForm()" action="main.jsp" method="post">
             <input type="hidden" name="securedUsername" id="securedUsername" value="" />
             <input type="hidden" name="securedPassword" id="securedPassword" value="" />
-            <input type="submit" value="ทฮฑืภฮ">
+            <input type="submit" value="๋ก๊ทธ์ธ">
         </form>
 </body>
 <script type="text/javascript">
