@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>ë¡œê·¸ì¸</title>
+<title>æ¿¡ï¿½æ´¹ëª„ï¿½ï¿½</title>
 </head>
 <body>
 		<script type="text/javascript" src="lib/js/rsa/jsbn.js"></script>
@@ -26,13 +26,13 @@
         </form>
 </body>
 <script type="text/javascript">
-function validateEncryptedForm(){			//·Î±×ÀÎ ¹öÆ° Å¬¸¯½Ã È£Ãâ
+function validateEncryptedForm(){			//ë¡œê·¸ì¸ ë²„íŠ¼ í´ë¦­ì‹œ í˜¸ì¶œ
 	var username = document.getElementById("username").value;
 	var password = document.getElementById("password").value;
 	try{
 		var rsaPublicKeyModulus = document.getElementById("rsaPublicKeyModulus").value;
 		var rsaPublicKeyExponent = document.getElementById("rsaPublicKeyExponent").value;
-		submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent);			//º¹È£È­ È£Ãâ
+		submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent);			//ë³µí˜¸í™” í•¨ìˆ˜ í˜¸ì¶œ
 	}catch(err){
 		alert("Error");
 		alert(err);
@@ -40,7 +40,7 @@ function validateEncryptedForm(){			//·Î±×ÀÎ ¹öÆ° Å¬¸¯½Ã È£Ãâ
 	return false;
 }
 
-function submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent){		//º¹È£È­ ÇÔ¼ö
+function submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent){		//ë³µí˜¸í™” í•¨ìˆ˜
 	var rsa = new RSAKey();
 	rsa.setPublic(rsaPublicKeyModulus, rsaPublicKeyExponent);
 	
