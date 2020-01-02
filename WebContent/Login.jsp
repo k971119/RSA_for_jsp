@@ -17,7 +17,7 @@
 </head>
 <body>
 <%
-	new cryptedRsa().encryptRsa(request, response, "Login2.jsp");
+	new cryptedRsa().encryptRsa(request, response, "Sec.jsp");
 %>
 </body>
 </html>
