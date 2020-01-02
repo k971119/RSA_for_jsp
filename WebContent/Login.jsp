@@ -17,7 +17,7 @@
 </head>
 <body>
 <%
-	new cryptedRsa().encryptRsa(request, response, "Secured.jsp");
+	new cryptedRsa().encryptRsa(request, response, "Login2.jsp");			//키 생성후 로그인 페이지로 이동
 %>
 </body>
 </html>

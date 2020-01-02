@@ -26,13 +26,13 @@
         </form>
 </body>
 <script type="text/javascript">
-function validateEncryptedForm(){
+function validateEncryptedForm(){			//로그인 버튼 클릭시 호출
 	var username = document.getElementById("username").value;
 	var password = document.getElementById("password").value;
 	try{
 		var rsaPublicKeyModulus = document.getElementById("rsaPublicKeyModulus").value;
 		var rsaPublicKeyExponent = document.getElementById("rsaPublicKeyExponent").value;
-		submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent);
+		submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent);			//복호화 호출
 	}catch(err){
 		alert("Error");
 		alert(err);
@@ -40,7 +40,7 @@ function validateEncryptedForm(){
 	return false;
 }
 
-function submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent){
+function submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent){		//복호화 함수
 	var rsa = new RSAKey();
 	rsa.setPublic(rsaPublicKeyModulus, rsaPublicKeyExponent);
 	
