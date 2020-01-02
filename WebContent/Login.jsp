@@ -7,17 +7,17 @@
 <%@page import="java.security.KeyFactory"%>
 <%@page import="java.security.KeyPair"%>
 <%@page import="java.security.KeyPairGenerator"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 <%
-	new cryptedRsa().encryptRsa(request, response, "Login2.jsp");			//Å° »ı¼ºÈÄ ·Î±×ÀÎ ÆäÀÌÁö·Î ÀÌµ¿
+	new cryptedRsa().encryptRsa(request, response, "Login2.jsp");			//í‚¤ ìƒì„±í›„ ë¡œê·¸ì¸ í˜ì´ì§€ë¡œ ì´ë™
 %>
 </body>
 </html>
