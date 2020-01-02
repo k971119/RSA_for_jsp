@@ -70,6 +70,7 @@ public class cryptedRsa {
 
 		String publicKeyModulus = "";
 		String publicKeyExponent = "";
+		PublicKey publicK = keypair.getPublic();
 
 		try {
 			RSAPublicKeySpec publicSpec = (RSAPublicKeySpec)keyFactory.getKeySpec(publicKey, RSAPublicKeySpec.class);
