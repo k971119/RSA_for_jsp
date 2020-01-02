@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>º¹È£È­ ÆäÀÌÁö</title>
+<title>ë³µí˜¸í™” í˜ì´ì§€</title>
 </head>
 <body>
 		<script type="text/javascript" src="lib/js/rsa/jsbn.js"></script>
@@ -14,25 +14,25 @@
     </head>
     <body>
         <div>
-            <label for="username">»ç¿ëÀÚID : <input type="text" id="username" size="16"/></label>
-            <label for="password">ºñ¹Ğ¹øÈ£ : <input type="password" id="password" size="16" /></label>
+            <label for="username">ì‚¬ìš©ìID : <input type="text" id="username" size="16"/></label>
+            <label for="password">ë¹„ë°€ë²ˆí˜¸ : <input type="password" id="password" size="16" /></label>
             <input type="hidden" id="rsaPublicKeyModulus" value="<%=request.getAttribute("publicKeyModulus")%>" />
             <input type="hidden" id="rsaPublicKeyExponent" value="<%=request.getAttribute("publicKeyExponent")%>" />
         </div>
         <form id="securedLoginForm" name="securedLoginForm" onsubmit="validateEncryptedForm()" action="main.jsp" method="post">
             <input type="hidden" name="securedUsername" id="securedUsername" value="" />
             <input type="hidden" name="securedPassword" id="securedPassword" value="" />
-            <input type="submit" value="·Î±×ÀÎ">
+            <input type="submit" value="ë¡œê·¸ì¸">
         </form>
 </body>
 <script type="text/javascript">
-function validateEncryptedForm(){			//·Î±×ÀÎ ¹öÆ° Å¬¸¯½Ã È£Ãâ
+function validateEncryptedForm(){			//ë¡œê·¸ì¸ ë²„íŠ¼ í´ë¦­ì‹œ í˜¸ì¶œ
 	var username = document.getElementById("username").value;
 	var password = document.getElementById("password").value;
 	try{
 		var rsaPublicKeyModulus = document.getElementById("rsaPublicKeyModulus").value;
 		var rsaPublicKeyExponent = document.getElementById("rsaPublicKeyExponent").value;
-		submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent);			//º¹È£È­ ÇÔ¼ö È£Ãâ
+		submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent);			//ë³µí˜¸í™” í•¨ìˆ˜ í˜¸ì¶œ
 	}catch(err){
 		alert("Error");
 		alert(err);
@@ -40,7 +40,7 @@ function validateEncryptedForm(){			//·Î±×ÀÎ ¹öÆ° Å¬¸¯½Ã È£Ãâ
 	return false;
 }
 
-function submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent){		//º¹È£È­ ÇÔ¼ö
+function submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent){		//ë³µí˜¸í™” í•¨ìˆ˜
 	var rsa = new RSAKey();
 	rsa.setPublic(rsaPublicKeyModulus, rsaPublicKeyExponent);
 	
