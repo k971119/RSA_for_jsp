@@ -1,12 +1,12 @@
 <%@page import="secure.cryptedRsa"%>
 <%@page import="java.security.PrivateKey"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>º¹È£È­ ÆäÀÌÁö</title>
+<title>ë³µí˜¸í™” í˜ì´ì§€</title>
 </head>
 <body>
 <%
@@ -16,10 +16,10 @@ String username = "";
 String password = "";
 
 PrivateKey privateKey = (PrivateKey)session.getAttribute("_rsaPrivateKey_");
-session.removeAttribute("_rsaPrivateKey_");						//¼¼¼Ç¿¡¼­ °³ÀÎÅ°°ª »èÁ¦·Î Àç»ç¿ë¹æÁö
+session.removeAttribute("_rsaPrivateKey_");						//ì„¸ì…˜ì—ì„œ ê°œì¸í‚¤ê°’ ì‚­ì œë¡œ ì¬ì‚¬ìš©ë°©ì§€
 
 if(privateKey == null){
-	out.print("<script>alert('¼¼¼Ç¿¡¼­ º¸¾ÈÅ°¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.');</script>");
+	out.print("<script>alert('ì„¸ì…˜ì—ì„œ ë³´ì•ˆí‚¤ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.');</script>");
 }
 try{
 	username = new cryptedRsa().decryptRsa(privateKey, securedUsername);
