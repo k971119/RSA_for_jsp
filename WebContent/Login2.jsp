@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>濡�洹몄��</title>
+<title>복호화 페이지</title>
 </head>
 <body>
 		<script type="text/javascript" src="lib/js/rsa/jsbn.js"></script>
