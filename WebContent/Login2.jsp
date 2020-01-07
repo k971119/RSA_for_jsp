@@ -32,7 +32,7 @@ function validateEncryptedForm(){			//로그인 버튼 클릭시 호출
 	try{
 		var rsaPublicKeyModulus = document.getElementById("rsaPublicKeyModulus").value;
 		var rsaPublicKeyExponent = document.getElementById("rsaPublicKeyExponent").value;
-		submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent);			//복호화 함수 호출
+		submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent);			//암호화 함수 호출
 	}catch(err){
 		alert("Error");
 		alert(err);
@@ -40,7 +40,7 @@ function validateEncryptedForm(){			//로그인 버튼 클릭시 호출
 	return false;
 }
 
-function submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent){		//복호화 함수
+function submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPublicKeyExponent){		//암호화 함수
 	var rsa = new RSAKey();
 	rsa.setPublic(rsaPublicKeyModulus, rsaPublicKeyExponent);
 	
